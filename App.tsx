@@ -388,7 +388,7 @@ const App: React.FC = () => {
               <PaperClip className="left-1/2 -translate-x-1/2 -top-4" />
               <div className="aspect-square w-full bg-gray-200 mb-4 overflow-hidden relative grayscale contrast-125">
                 <img 
-                  src="./assets/kingsleyt.jpg" 
+                  src="/dailydev/kingsleyt.jpg" 
                   alt="Suspect Mugshot" 
                   className="w-full h-full object-cover"
                 />

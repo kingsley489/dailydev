@@ -31,69 +31,72 @@ const SKILLS: Skill[] = [
 const PROJECTS: Project[] = [
   {
     id: "CASE-001",
-    title: "THE QUANTUM DASHBOARD",
-    date: "OCT 2024",
-    description: "A real-time financial analytics platform visualizing complex datasets.",
-    synopsis: "Client reported a need for high-frequency data visualization. Existing tools were sluggish and unresponsive under load. The objective was to architect a dashboard capable of rendering 50k+ data points in real-time without freezing the browser.",
-    technologies: ["React", "D3.js", "WebSockets"],
+    title: "TRENDHUB MARKETPLACE",
+    date: "NOV 2024",
+    description: "A multi-category e-commerce platform with product filtering and cart management.",
+    synopsis: "Built a full-featured e-commerce storefront with category-based navigation across Electronics, Fashion, Furniture, and Grocery. Required dynamic product displays, cart functionality, and responsive design across devices.",
+    technologies: ["React", "TypeScript", "TailwindCSS", "Figma"],
     imageUrl: "https://picsum.photos/600/400?grayscale",
     classified: false,
-    link: "#",
-    findings: "Investigation revealed that standard DOM manipulation was the bottleneck. Implementing D3.js with a canvas fallback layer resulted in a 400% performance increase.",
-    challenges: "Synchronizing WebSocket streams with the UI render cycle caused initial frame drops. A custom buffering hook was developed to smooth out the data flow.",
+    link: "https://kingsley489.github.io/trendhub-e-commerce/",
+    findings: "Designed UI/UX in Figma before development to ensure consistent branding and user flow. Implemented TypeScript for compile-time safety and TailwindCSS for rapid, responsive styling across breakpoints, reducing runtime errors during cart operations and checkout processes.",
+    challenges: "Type-safe state management for cart operations and product filtering across multiple categories. Designed component architecture to handle reusable product cards with rating systems and category-specific routing.",
     evidence: [
       { type: 'image', content: "https://picsum.photos/600/300?grayscale", caption: "Fig 1.A: Live Data Stream" },
-      { type: 'code', content: "const useDataStream = (socket) => { ... }", caption: "Exhibit B: The Buffer Hook" }
+      { type: 'code', content: "const useDataStream = (socket) => { ... }", caption: "Exhibit B: Type Definitions" }
     ]
   },
   {
-    id: "CASE-002",
-    title: "PROJECT: NEBULA",
-    date: "AUG 2024",
-    description: "AI-driven content generation engine mimicking human writing styles.",
-    synopsis: "Subject attempted to automate creative writing processes. The system needed to parse semantic intent and output coherent, stylistic prose. Ethical guardrails were a primary requirement from the oversight committee.",
-    technologies: ["Python", "TensorFlow", "FastAPI"],
-    imageUrl: "https://picsum.photos/600/401?grayscale",
-    classified: true,
-    link: "#",
-    findings: "The model successfully replicated 14 different writing styles. Latency was reduced to sub-200ms for prompt generation.",
-    challenges: "Preventing hallucination in the output required a rigorous post-processing validation layer.",
-    evidence: [
-      { type: 'image', content: "https://picsum.photos/600/301?grayscale", caption: "Fig 2.A: Neural Pathways" }
-    ]
-  },
+  id: "CASE-002",
+  title: "SECURY PLATFORM",
+  date: "DEC 2024",
+  description: "AI-powered blockchain security platform for smart contract auditing and threat detection.",
+  synopsis: "Developed a comprehensive security infrastructure for blockchain applications featuring AI-driven smart contract analysis, real-time threat monitoring, and military-grade encryption protocols. The platform required integration with Gemini AI for automated vulnerability detection in Solidity and Rust contracts.",
+  technologies: ["React", "TypeScript", "TailwindCSS", "Gemini AI"],
+  imageUrl: "https://picsum.photos/600/401?grayscale",
+  classified: false,
+  link: "https://kingsley489.github.io/secury-blockchain-security",
+  findings: "Successfully implemented AI-powered smart contract auditing system capable of detecting vulnerabilities in real-time. Multi-page architecture with responsive design across Home, Company, Contact, and Documentation sections. Integrated code editor interface for instant security analysis.",
+  challenges: "Integrating Gemini AI API for smart contract analysis while maintaining a secure, user-friendly code submission interface. Designed trust-building UI elements showcasing security metrics and enterprise credibility. Structured complex technical documentation in an accessible format.",
+  evidence: [
+    { type: 'image', content: "https://picsum.photos/600/301?grayscale", caption: "Fig 2.A: Smart Contract Audit Interface" },
+    { type: 'code', content: "const analyzeContract = async (code: string) => { /* Gemini AI integration */ }", caption: "Exhibit B: AI Audit Function" }
+  ]
+},
   {
-    id: "CASE-003",
-    title: "THE VAULT API",
-    date: "JUN 2024",
-    description: "Secure banking infrastructure built for high-concurrency transactions.",
-    synopsis: "A digital fortress was required for a new fintech challenger. The brief demanded zero downtime and military-grade encryption for all data in transit and at rest.",
-    technologies: ["Node.js", "PostgreSQL", "Redis"],
-    imageUrl: "https://picsum.photos/600/402?grayscale",
-    classified: false,
-    link: "#",
-    findings: "Penetration testing revealed zero critical vulnerabilities after 3 rounds of attacks. Throughput capacity exceeded 10,000 TPS.",
-    challenges: "Handling race conditions during simultaneous ledger updates. Optimistic locking strategies were deployed to resolve conflicts.",
-    evidence: [
-      { type: 'image', content: "https://picsum.photos/600/302?grayscale", caption: "Fig 3.A: Architecture Diagram" }
-    ]
-  },
+  id: "CASE-003",
+  title: "RESUMATE AI",
+  date: "JAN 2025",
+  description: "AI-powered resume builder with ATS optimization and real-time job matching.",
+  synopsis: "Developed a comprehensive resume creation platform leveraging AI to generate professional content tailored to specific job descriptions. System required real-time preview rendering, multi-tier subscription management, and secure user data handling with PDF export capabilities.",
+  technologies: ["React", "TypeScript", "TailwindCSS", "AI Integration"],
+  imageUrl: "https://picsum.photos/600/402?grayscale",
+  classified: false,
+  link: "https://kingsley489.github.io/resumate-ai",
+  findings: "Successfully implemented AI content generation for resume summaries and bullet points with job description matching algorithm. Built responsive multi-page architecture including pricing tiers, feature showcase, and contact system. Integrated secure PDF export and ATS-friendly template system.",
+  challenges: "Real-time resume preview synchronization with user input while maintaining performance. Designing AI prompts for professional, recruiter-approved content generation. Structuring pricing model with feature gating across Basic, Pro, and Lifetime tiers.",
+  evidence: [
+    { type: 'image', content: "https://picsum.photos/600/302?grayscale", caption: "Fig 3.A: Resume Builder Interface" },
+    { type: 'code', content: "const generateContent = async (prompt: string) => { /* AI generation logic */ }", caption: "Exhibit B: AI Content Generator" }
+  ]
+},
   {
-    id: "CASE-004",
-    title: "OPERATION: E-COMM",
-    date: "JAN 2024",
-    description: "Scalable e-commerce headless architecture for high-volume retail.",
-    synopsis: "Target required a platform capable of withstanding 'Black Friday' traffic surges. The legacy monolith was crumbling under pressure.",
-    technologies: ["Next.js", "Stripe", "Sanity"],
-    imageUrl: "https://picsum.photos/600/403?grayscale",
-    classified: false,
-    link: "#",
-    findings: "Load testing confirmed stability at 5x peak historical traffic. Checkout conversion rates improved by 15% due to speed enhancements.",
-    challenges: "Integrating legacy inventory systems with the new modern frontend. A middleware synchronization layer was constructed.",
-    evidence: [
-      { type: 'image', content: "https://picsum.photos/600/303?grayscale", caption: "Fig 4.A: Checkout Flow" }
-    ]
-  }
+  id: "CASE-004",
+  title: "SYMBOL BOARD",
+  date: "SEP 2025",
+  description: "Academic symbol reference tool with instant copy-paste functionality for students.",
+  synopsis: "Built a comprehensive symbol database and search interface to solve a recurring problem faced by coursemates: finding and copying special characters for academic assignments. The system needed to categorize hundreds of symbols across mathematics, chemistry, physics, and currency while providing instant clipboard access.",
+  technologies: ["HTML", "CSS", "JavaScript", "PWA"],
+  imageUrl: "https://picsum.photos/600/403?grayscale",
+  classified: false,
+  link: "https://kingsley489.github.io/SymbolBoard/",
+  findings: "Implemented Progressive Web App architecture for offline access and mobile installation. Created organized category system covering 200+ symbols including Greek letters, mathematical operators, chemical notation, arrows, and currency symbols. Single-click copy mechanism eliminates manual character lookup and reduces assignment completion time.",
+  challenges: "Structuring extensive symbol dataset for optimal search performance and category navigation. Implementing reliable clipboard API across different browsers and devices. Designing intuitive UI that allows rapid symbol discovery and reduces cognitive load during academic work.",
+  evidence: [
+    { type: 'image', content: "https://picsum.photos/600/303?grayscale", caption: "Fig 4.A: Symbol Categories Interface" },
+    { type: 'code', content: "navigator.clipboard.writeText(symbol).then(() => { /* Copy success */ })", caption: "Exhibit B: Clipboard Integration" }
+  ]
+}
 ];
 
 // --- Helper Components ---
@@ -212,7 +215,7 @@ const CaseFileModal = ({ project, onClose }: { project: Project, onClose: () => 
 
               {project.link && (
                 <div className="pt-4">
-                  <a href={project.link} className="inline-flex items-center gap-2 bg-black text-white px-6 py-3 font-bold font-typewriter uppercase tracking-widest hover:bg-red-700 transition-colors">
+                  <a href={project.link} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-black text-white px-6 py-3 font-bold font-typewriter uppercase tracking-widest hover:bg-red-700 transition-colors">
                     Access External Files <ExternalLink size={16} />
                   </a>
                 </div>
@@ -558,7 +561,7 @@ const App: React.FC = () => {
                       <div className="bg-black text-white p-2 rounded-full group-hover:bg-red-700 transition-colors">
                         <Mail size={20} />
                       </div>
-                      <span>hello@example.com</span>
+                      <span>kingsleydesigns37@gmail.com</span>
                     </a>
                     <div className="flex gap-4 mt-6">
                       {[

@@ -570,7 +570,7 @@ const App: React.FC = () => {
                         { icon: Linkedin, label: "LinkedIn" },
                         { icon: Twitter, label: "Twitter" }
                       ].map((Social, i) => (
-                        <a key={i} href="#" className="bg-white border-2 border-black p-3 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:translate-y-1 hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] transition-all">
+                        <a key={i} href="https://github.com/kingsley489/" className="bg-white border-2 border-black p-3 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:translate-y-1 hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] transition-all">
                           <Social.icon className="w-6 h-6" />
                         </a>
                       ))}
